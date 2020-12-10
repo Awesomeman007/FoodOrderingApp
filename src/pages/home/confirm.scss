@@ -1,0 +1,50 @@
+.bar-button {
+    color: #C60000 !important;
+}
+
+.header .toolbar-background {
+    background-color: white !important;
+    border: none;
+}
+
+ion-header {
+    padding-bottom: 0 !important;
+}
+
+.header.title.menu-detail {
+    padding-top: 0;
+}
+
+ion-card-header {
+    white-space: normal;
+}
+
+.tabbar {
+    transition-duration: 0.3s;
+}
+
+.button.order_button {
+    margin-left: 12px;
+    width: calc(100% - 24px);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    background-color: #C60000;
+    transition-duration: 0.3s;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.button.order_button:hover {
+    background-color: rgb(160, 0, 0)
+}
+
+.container {
+    margin-top: 20px;
+    margin-left: 12px;
+    width: calc(100% - 24px);
+}
+
+.container h5 {
+    font-size: 1.6rem;
+}

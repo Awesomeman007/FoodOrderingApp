@@ -1,0 +1,41 @@
+<ion-header>
+  
+   
+  
+</ion-header>
+
+
+<ion-content>
+  <ion-title size='larger' class='header'>
+    <h1> Let's Order </h1>
+    <h1> Some Food! </h1>
+  </ion-title>
+  <div *ngIf='menu$ | async as menu' >
+    <ion-card class='card' (click)="onClickShowMenuDetail(menu[1].menu_num, menu[1].name, menu[1].image, menu[1].description, menu[1].price)">
+      <ion-card-header class='card-header'>
+        <img class='image' src= {{menu[1].image}}/>
+        <ion-card-title class='card-header-title'> {{menu[1].name}} <span class='card-label'> {{menu[1].price.toString()}} Baht </span> </ion-card-title>
+      </ion-card-header>      
+    </ion-card>
+
+    <ion-card class='card' (click)="onClickShowMenuDetail(menu[2].menu_num, menu[2].name, menu[2].image, menu[2].description, menu[2].price)">
+      <ion-card-header class='card-header'>
+        <img class='image'  src= {{menu[2].image}}/>
+        <ion-card-title class='card-header-title'> {{menu[2].name}} <span class='card-label'> {{menu[2].price.toString()}} Baht </span> </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class='card' (click)="onClickShowMenuDetail(menu[3].menu_num, menu[3].name, menu[3].image, menu[3].description, menu[3].price)">
+      <ion-card-header class='card-header'>
+        <img class='image' src={{menu[3].image}}/>
+        <ion-card-title class='card-header-title'> {{menu[3].name}} <span class='card-label'> {{menu[3].price.toString()}} Baht </span> </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    
+  </div>
+  
+
+  
+
+
+</ion-content>

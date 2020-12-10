@@ -1,0 +1,35 @@
+<ion-header>
+  
+   
+  
+</ion-header>
+
+
+<ion-content>
+  <ion-title size='larger' class='header'>
+    <h1> My Orders <button ion-button outline round color='danger' class='sort' (click)='onClickChangeSort()'> SORT BY DATE </button> </h1> 
+  </ion-title>
+  <div *ngIf='order$ | async as allOrder'>
+      <div *ngIf='allOrder["order"] != ""'>
+        <div *ngFor='let order of allOrder["order"]'>
+            <ion-card class='card'>
+                <ion-card-header class='card-header'>
+                    <ion-card-title class='card-header-title'> {{(order.name)}} <div class='card-label order'> {{order.time}} </div> </ion-card-title>
+                </ion-card-header>       
+            
+            </ion-card>
+        </div>
+        <button ion-button round color='danger' class='clear' (click)='onClickClearOrder()'> CLEAR ALL ORDERS </button> 
+      </div>
+      <div *ngIf='allOrder["order"] == ""' class='caption'>
+          Your haven't ordered anything...
+      </div>
+    
+  </div>
+  
+  
+
+  
+
+
+</ion-content>

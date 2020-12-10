@@ -1,0 +1,55 @@
+<ion-header>
+  
+   
+  
+</ion-header>
+
+
+<ion-content>
+  <ion-title size='larger' class='header'>
+    <h1> My Tracking </h1>
+  </ion-title>
+  <div *ngIf='tracking$ | async as tracking'>
+        <ion-card class='card' >
+            <ion-card-header class='card-header'>
+                <ion-card-title class='card-header-title'> Calorie <span class='card-label'> {{tracking.calorie}} Kcal </span> </ion-card-title>
+            </ion-card-header>       
+        </ion-card>
+        <ion-card class='card'>
+            <ion-card-header class='card-header'>
+                <ion-card-title class='card-header-title'> Protein <span class='card-label'> {{tracking.protein}} g. </span> </ion-card-title>
+            </ion-card-header>       
+        </ion-card>
+        <ion-card class='card'>
+            <ion-card-header class='card-header'>
+                <ion-card-title class='card-header-title'> Carbohydrate <span class='card-label'> {{tracking.carb}} g. </span> </ion-card-title>
+            </ion-card-header>       
+        </ion-card>
+        <ion-card class='card'>
+            <ion-card-header class='card-header'>
+                <ion-card-title class='card-header-title'> Fats <span class='card-label'> {{tracking.fats}} g. </span> </ion-card-title>
+            </ion-card-header>       
+        </ion-card>
+        <ion-card class='card'>
+            <ion-card-header class='card-header'>
+                <ion-card-title class='card-header-title'> Expense <span class='card-label'> {{tracking.expense}} Baht </span> </ion-card-title>
+            </ion-card-header>       
+        </ion-card>
+         <div style='display: block'>
+            <canvas baseChart 
+                [data]='[tracking.protein, tracking.fats, tracking.carb]'
+                [labels]='doughnutChartLabels'
+                [chartType]='doughnutChartType'
+                [colors]="doughnutColors"
+                (chartHovered)='chartHovered($event)'
+                (chartClick)='chartClicked($event)'>
+            </canvas>
+        </div>
+  </div>
+  
+  
+
+  
+
+
+</ion-content>

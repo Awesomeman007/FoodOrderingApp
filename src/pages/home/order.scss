@@ -1,0 +1,38 @@
+.order.card-label {
+    font-size: 10px;
+    padding-top: 2px;
+    color: gray;
+}
+
+button.sort {
+    color: #c60000;
+    border-color: #c60000;
+    float: right;
+    height: 25px;
+    padding: 8px;
+    margin-top: 5px;;
+    text-align: center;
+    font-size: 10px;
+}
+
+button.clear {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #c60000;
+    height: 25px;
+    padding: 8px;
+    margin-top: 5px;;
+    text-align: center;
+    font-size: 10px;
+    margin: auto;
+    margin-top: 25px;
+    font-weight: bolder;
+}
+
+.caption {
+    margin-top: 50px;
+    text-align: center;
+    color: gray;
+}
+

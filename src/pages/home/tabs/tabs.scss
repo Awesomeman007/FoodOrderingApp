@@ -1,0 +1,28 @@
+page-tabs {
+    $tabs-ios-tab-icon-color: #00f;
+    $tabs-ios-tab-icon-color-active: rgb(255, 255, 255);
+}
+
+.tabbar {
+    background-color: #c60000 !important;
+    border-top: none !important;
+    height: 56px;
+    
+}
+
+.tab-button {
+    color: white !important;
+}
+
+.tab-button:active {
+    color: white !important;
+    font-weight: bolder;
+}
+
+.tab-item-active {
+    background: white;
+}
+
+.tab-button-icon:before {
+    color: white;
+}

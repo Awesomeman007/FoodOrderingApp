@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button icon-only menuToggle back-btn>
+          <ion-icon [name]="navbarIcon"></ion-icon>
+        </button>
+    </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content>
+        <ion-title size='larger' class='header menu-detail'>
+            <h1> {{name}} </h1>
+        </ion-title>
+        <ion-card class='card'>
+            <ion-card-header class='card-header'>
+                <img class='image' src= {{image}}/>
+            </ion-card-header>      
+        </ion-card>
+        <div class='container'>
+            <h5> {{description}} </h5>
+            <h4> {{price}} Baht </h4>
+        </div>
+
+        
+        <button ion-button full class='order_button' (click)='sendOrder(menuNum)'>
+            Place Order
+        </button>
+
+        
+
+    
+    
+  
+  
+
+  
+
+
+</ion-content>
